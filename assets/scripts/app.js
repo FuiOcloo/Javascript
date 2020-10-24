@@ -2,7 +2,7 @@ const defaultNumber = 0;
 let currentNumber = defaultNumber;
 
 function add() {
-    currentNumber = currentNumber + userInput.value;
+    currentNumber = currentNumber + parseInt(userInput.value);
     outputResult(currentNumber, '');
 }
 
