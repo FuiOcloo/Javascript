@@ -1,13 +1,15 @@
 const defaultNumber = 0;
 let currentNumber = defaultNumber;
 
+//getsinput from input field
 function getUserNumberInput(){
     return parseInt(userInput.value);
 }
 
+//generates and writes calculation log
 function createAndWriteOutput(operator, resultBeforeCalc, CalcNumber){
     const calcDescription = `${resultBeforeCalc} ${operator} ${CalcNumber}`;
-    outputResult(currentNumber, calcDescription);
+    outputResult(currentNumber, calcDescription); //from vendor.js file
 }
 
 function add() {
@@ -35,7 +37,7 @@ function divide(){
     const enteredNumber = getUserNumberInput();
     const initialResult = currentNumber;
     currentNumber = currentNumber / enteredNumber;
-    createAndWriteOutput('/', initialResult, enteredNumber);
+    createAndWriteOutput('/',initialResult, enteredNumber);
 }
 
 addBtn.addEventListener('click', add);
