@@ -1,5 +1,6 @@
 const defaultNumber = 0;
 let currentNumber = defaultNumber;
+let logEntries;
 
 //getsinput from input field
 function getUserNumberInput(){
