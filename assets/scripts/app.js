@@ -25,6 +25,7 @@ function add() {
         result: currentNumber
     };
     logEntries.push(logEntry);
+    console.log(logEntry.operation);
     console.log(logEntries);
 }
 
