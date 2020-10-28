@@ -25,6 +25,10 @@ function writeToLog(operationIdentifier, prevResult, operationNumber, newResult)
 }
 
 function calculateResult(calculationType){
+    if (calculationType !== 'ADD' && calculationType !== 'SUBTRACT' && calculationType !== 'MULTIPLY' && calculationType !== 'DIVIDE')  {
+        return;
+    }
+    
     const enteredNumber = getUserNumberInput();
     const initialResult = currentNumber;
     let mathOperator;
@@ -41,6 +45,7 @@ function calculateResult(calculationType){
         currentNumber = currentNumber / enteredNumber;
         mathOperator = '/';
     }
+
     createAndWriteOutput(mathOperator, initialResult, enteredNumber);
     writeToLog(calculationType, initialResult, enteredNumber, currentNumber);
 }
