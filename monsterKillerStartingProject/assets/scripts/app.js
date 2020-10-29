@@ -150,7 +150,13 @@ function printLogHandler(){
     for(let i = 0; i < 3; i++){
         console.log('---------------');
     }
+    for (const logEntry of battleLog){
+        console.log(logEntry);
+        console.log(i);
+        i++
+    }
     console.log(battleLog);
+
 }
 
 attackBtn.addEventListener('click', attackHandler);
