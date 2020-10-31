@@ -154,7 +154,9 @@ function printLogHandler(){
         console.log('#$(i)');
         for (const key in logEntry) {
             console.log(key);
+            console.log(logEntry[key]);
         }
+        i++;
     }
     console.log(battleLog);
 
